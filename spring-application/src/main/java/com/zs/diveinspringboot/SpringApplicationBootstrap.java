@@ -26,7 +26,7 @@ public class SpringApplicationBootstrap {
         SpringApplication springApplication = new SpringApplication();
 //        springApplication.setSources(Collections.singleton(ApplicationConfiguration.class.getName()));
         springApplication.setSources(sources);
-        springApplication.setWebApplicationType(WebApplicationType.NONE);
+//        springApplication.setWebApplicationType(WebApplicationType.NONE);
         ConfigurableApplicationContext context = springApplication.run(args);
         System.out.println("Bean:"+context.getBean(ApplicationConfiguration.class));
     }

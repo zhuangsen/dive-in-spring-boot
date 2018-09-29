@@ -1,0 +1,10 @@
+# Initializers
+org.springframework.context.ApplicationContextInitializer=\
+com.zs.diveinspringboot.context.AfterHelloWorldApplicationContextInitializer,\
+com.zs.diveinspringboot.context.HelloWorldApplicationContextInitializer
+
+# Application Listeners
+org.springframework.context.ApplicationListener=\
+com.zs.diveinspringboot.listener.AfterHelloApplicationListener,\
+com.zs.diveinspringboot.listener.HelloApplicationListener
+
