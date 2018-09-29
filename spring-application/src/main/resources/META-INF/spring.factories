@@ -8,3 +8,6 @@ org.springframework.context.ApplicationListener=\
 com.zs.diveinspringboot.listener.AfterHelloApplicationListener,\
 com.zs.diveinspringboot.listener.HelloApplicationListener
 
+# Run Listeners
+org.springframework.boot.SpringApplicationRunListener=\
+com.zs.diveinspringboot.run.HelloWorldRunListener
