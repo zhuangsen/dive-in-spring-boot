@@ -6,7 +6,8 @@ com.zs.diveinspringboot.context.HelloWorldApplicationContextInitializer
 # Application Listeners
 org.springframework.context.ApplicationListener=\
 com.zs.diveinspringboot.listener.AfterHelloApplicationListener,\
-com.zs.diveinspringboot.listener.HelloApplicationListener
+com.zs.diveinspringboot.listener.HelloApplicationListener,\
+com.zs.diveinspringboot.listener.BeforeConfigFileApplicationListener
 
 # Run Listeners
 org.springframework.boot.SpringApplicationRunListener=\
