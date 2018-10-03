@@ -14,6 +14,8 @@
         <module>springboot-webmvc</module>
         <module>springboot-view</module>
         <module>springboot-rest</module>
+        <module>spring-servlet</module>
+        <module>spring-boot-servlet</module>
     </modules>
     <packaging>pom</packaging>
 
