@@ -4,6 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerRequest;
@@ -22,9 +25,23 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
  */
 
 @SpringBootApplication
+@RestController
 public class WebFluxApplication {
+
     public static void main(String[] args) {
         SpringApplication.run(WebFluxApplication.class);
+    }
+
+    @GetMapping("mvc")
+    public String mvc() {
+        println("MVC");
+        return "MVC";
+    }
+
+    @GetMapping("mono")
+    public Mono<String> mono() {
+        println("mono");
+        return Mono.just("Mono");
     }
 
     @Bean
@@ -44,7 +61,12 @@ public class WebFluxApplication {
     }
 
     public Mono<ServerResponse> hellWorld(ServerRequest serverRequest) {
+        println("hellWorld");
         return ServerResponse.status(HttpStatus.OK)
                 .body(Mono.just("Hello,World"), String.class);
+    }
+
+    private static void println(String mseeage) {
+        System.out.println("[" + Thread.currentThread().getName() + "]: " + mseeage);
     }
 }
