@@ -11,7 +11,6 @@ import java.util.concurrent.*;
 
 /**
  * Hello World 异步 {@link RestController}
- *
  */
 @RestController
 @EnableScheduling
@@ -38,12 +37,12 @@ public class HelloWorldAsyncController {
     }
 
     @GetMapping("/completion-stage")
-    public CompletionStage<String> completionStage(){
+    public CompletionStage<String> completionStage() {
         final long startTime = System.currentTimeMillis();
 
         println("Hello,World");
 
-        return CompletableFuture.supplyAsync(()->{
+        return CompletableFuture.supplyAsync(() -> {
             long costTime = System.currentTimeMillis() - startTime;
             println("执行计算结果，消耗：" + costTime + " ms.");
             return "Hello,World"; // 异步执行结果
