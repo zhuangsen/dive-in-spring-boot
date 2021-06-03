@@ -10,6 +10,6 @@ public class HelloWorldApplicationContextInitializer<C extends ConfigurableAppli
 
     @Override
     public void initialize(C applicationContext) {
-        System.out.println("ConfigurableApplicationContext.id:="+applicationContext.getId());
+        System.out.println("ConfigurableApplicationContext.id = "+applicationContext.getId());
     }
 }

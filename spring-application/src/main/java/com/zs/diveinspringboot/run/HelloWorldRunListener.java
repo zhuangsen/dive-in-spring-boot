@@ -1,5 +1,6 @@
 package com.zs.diveinspringboot.run;
 
+import org.springframework.boot.ConfigurableBootstrapContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.context.ApplicationListener;
@@ -19,12 +20,12 @@ public class HelloWorldRunListener implements SpringApplicationRunListener {
     }
 
     @Override
-    public void starting() {
+    public void starting(ConfigurableBootstrapContext bootstrapContext) {
         System.out.println("HelloWorldRunListener starting()...");
     }
 
     @Override
-    public void environmentPrepared(ConfigurableEnvironment environment) {
+    public void environmentPrepared(ConfigurableBootstrapContext bootstrapContext, ConfigurableEnvironment environment) {
 
     }
 

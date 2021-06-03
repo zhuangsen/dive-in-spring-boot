@@ -1,5 +1,6 @@
 package com.zs.diveinspringboot.condition;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Conditional;
 
 import java.lang.annotation.*;
@@ -11,6 +12,7 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Documented
 @Conditional(OnSystemPropertyCondition.class)
+@ConditionalOnMissingBean
 public @interface ConditionOnSystemProperty {
 
     /**

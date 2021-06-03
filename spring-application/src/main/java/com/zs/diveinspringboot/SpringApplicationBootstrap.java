@@ -20,8 +20,10 @@ public class SpringApplicationBootstrap {
 //        SpringApplication.run(ApplicationConfiguration.class, args);
 
         Set<String> sources = new HashSet<>();
+
         //配置Class 名称
         sources.add(ApplicationConfiguration.class.getName());
+
 //      SpringApplication springApplication =  new SpringApplication(ApplicationConfiguration.class)
         SpringApplication springApplication = new SpringApplication();
 //        springApplication.setSources(Collections.singleton(ApplicationConfiguration.class.getName()));

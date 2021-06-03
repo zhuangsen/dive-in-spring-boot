@@ -73,6 +73,5 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
         configurer.favorParameter(true)
                 .favorPathExtension(true);
-
     }
 }
